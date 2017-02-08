@@ -1,7 +1,7 @@
 import {items} from './data';
 import injector from 'angular-es-utils/injector';
 
-const TIMEOUT = 4000 ;
+const TIMEOUT = 2000 ;
 
 // 使用浏览器内置setTimout无法刷新数据
 function fetchVendors(start=1,limit=12){ // 数据起始id和数据个数限制, 后期进行Object.assign合并
