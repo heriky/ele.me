@@ -1,11 +1,17 @@
 # ele.me
 Create the ele.me main pages using Angular.
 
+[![NPM version](https://img.shields.io/npm/v/brick.js.svg?style=flat)](https://github.com/heriky/ele.me)
+[![Build Status](https://img.shields.io/travis/USER/REPO/BRANCH.svg)](https://github.com/heriky/ele.me)
+
 ### 快速开始
 > npm install 
 > npm run dev
 > 注：无法运行时，执行
 > npm install -g webpack@1.13.0 webpack-dev-server@1.14.1
+
+### 测试
+> npm run test
 
 ### 完成度说明
 

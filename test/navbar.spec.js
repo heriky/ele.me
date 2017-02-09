@@ -1,14 +1,27 @@
 var expect = require('chai').expect;
 var Nightmare = require('nightmare') ;
-
+var fork = require('child_process').fork;
+var path = require('path');
 describe('测试导航条', ()=>{
-	before(()=>{})
-	after(()=>{})
+	var child;
+	before((done)=>{
+		child = fork(path.resolve(__dirname, '../server.js'))
+		child.on('message', (msg)=>{
+			if (msg == 'listening') {
+				done();
+			}
+		})
+	})
+
+	after((done)=>{
+		child.kill();
+		done();
+	})
 
 	it('导航条文字测试', (done)=>{
 		var nightmare = new Nightmare({show: true})
 		nightmare
-			.goto('http://localhost:8080/')
+			.goto('http://localhost:3000/')
 			.wait(1000)
 			.evaluate(()=>{
 				var navs = Array.from(document.querySelectorAll('.navbar__menu-item'));
@@ -25,7 +38,7 @@ describe('测试导航条', ()=>{
 	it('导航条颜色测试', (done)=>{
 		var nightmare = new Nightmare({show: true})
 		nightmare
-			.goto('http://localhost:8080/')
+			.goto('http://localhost:3000/')
 			.wait(1000)
 			.evaluate(()=>{
 				var navbar = document.querySelector('header');
@@ -34,7 +47,7 @@ describe('测试导航条', ()=>{
 			.end()
 			.then(color=>{
 				expect(color).to.be.equal("rgb(30, 137, 224)");
-				done()
+				done();
 			})
 	})
 })

@@ -1,12 +1,26 @@
 var expect = require('chai').expect;
 var Nightmare = require('nightmare') ;
-
+var fork = require('child_process').fork;
+var path = require('path');
 describe('测试商家数据', ()=>{
+	var child;
+	before((done)=>{
+		child = fork(path.resolve(__dirname, '../server.js'))
+		child.on('message', msg=>{
+			if (msg === 'listening') {
+				done();
+			}
+		})
+	});
+	after((done)=>{
+		child.kill();
+		done();
+	});
 
 	it('首屏数据测试', done=>{
 		var nightmare = new Nightmare({show: true});
 		nightmare
-			.goto('http://localhost:8080/')
+			.goto('http://localhost:3000/')
 			.wait(4000)
 			.evaluate(()=>{
 				return document.querySelectorAll('.main-food__item').length;
@@ -21,7 +35,7 @@ describe('测试商家数据', ()=>{
 	it('加载更多功能测试', done=>{
 		var nightmare = new Nightmare({show: true});
 		nightmare
-			.goto('http://localhost:8080/')
+			.goto('http://localhost:3000/')
 			.wait(4000)
 			.click('.load-more')
 			.wait(4000)
@@ -34,5 +48,4 @@ describe('测试商家数据', ()=>{
 				done();
 			})
 	})
-
 })

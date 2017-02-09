@@ -3,6 +3,8 @@ import injector from 'angular-es-utils/injector';
 
 const TIMEOUT = 2000 ;
 
+// 模拟服务器HTTP请求
+
 // 使用浏览器内置setTimout无法刷新数据
 function fetchVendors(start=1,limit=12){ // 数据起始id和数据个数限制, 后期进行Object.assign合并
 	var $timeout =  injector.get('$timeout');
