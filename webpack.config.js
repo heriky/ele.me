@@ -19,9 +19,9 @@ module.exports = {
 	devtool: 'eval-source-map',
 	plugins: [
 	    new webpack.HotModuleReplacementPlugin(),
-	    new OpenBrowserPlugin({
-	      url: 'http://localhost:8080'
-	    }),
+	    // new OpenBrowserPlugin({
+	    //   url: 'http://localhost:8080'
+	    // }),
 		new HtmlwebpackPlugin({
 			title:'饿了么网上订餐',
 			template:path.resolve(APP_PATH,'./index.html'),

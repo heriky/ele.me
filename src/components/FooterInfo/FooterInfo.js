@@ -48,7 +48,7 @@ export default {
 						<div class="weibo"></div>
 					</div>
 				</div>
-				<div class="footer-link-item">
+				<div>
 					<a href="#" class="footer-qrcode"><img src="${weixinqc}" alt=""></a>
 					<div class="footer-qrcode-info">
 						<h3>下载手机版</h3><p>扫一扫,手机订餐方便</p>

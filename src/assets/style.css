@@ -791,8 +791,7 @@ body {
 
 .footer-qrcode {
     float: left;
-    margin-right: .2rem;
-    width: auto;
+    vertical-align: middle;
 }
 
 .footer-qrcode img {
@@ -801,7 +800,8 @@ body {
 }
 
 .footer-qrcode-info {
-    float: left;
+    display: inline-block;
+    vertical-align: middle;
 }
 
 .footer-qrcode-info h3 {
