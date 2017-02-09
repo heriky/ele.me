@@ -19,7 +19,7 @@ describe('测试导航条', ()=>{
 	})
 
 	it('导航条文字测试', (done)=>{
-		var nightmare = new Nightmare({show: true})
+		var nightmare = new Nightmare({show: false})
 		nightmare
 			.goto('http://localhost:3000/')
 			.wait(1000)
@@ -36,7 +36,7 @@ describe('测试导航条', ()=>{
 	});
 
 	it('导航条颜色测试', (done)=>{
-		var nightmare = new Nightmare({show: true})
+		var nightmare = new Nightmare({show: false})
 		nightmare
 			.goto('http://localhost:3000/')
 			.wait(1000)

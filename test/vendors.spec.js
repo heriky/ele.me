@@ -18,7 +18,7 @@ describe('测试商家数据', ()=>{
 	});
 
 	it('首屏数据测试', done=>{
-		var nightmare = new Nightmare({show: true});
+		var nightmare = new Nightmare({show: false});
 		nightmare
 			.goto('http://localhost:3000/')
 			.wait(4000)
@@ -33,7 +33,7 @@ describe('测试商家数据', ()=>{
 	});
 
 	it('加载更多功能测试', done=>{
-		var nightmare = new Nightmare({show: true});
+		var nightmare = new Nightmare({show: false});
 		nightmare
 			.goto('http://localhost:3000/')
 			.wait(4000)
