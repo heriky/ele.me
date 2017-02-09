@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "webpack-dev-server --hot --inline --progress  --history-api-fallback --colors --config webpack.dev.config.js",
     "build": "rimraf ./dist && webpack",
-    "test": "npm run build && mocha ./test --timeout 60000"
+    "test": "npm run build && mocha ./test --timeout 120000"
   },
   "keywords": [],
   "author": "",
