@@ -2,7 +2,7 @@
 Create the ele.me main pages using Angular.
 
 [![NPM version](https://img.shields.io/npm/v/brick.js.svg?style=flat)](https://github.com/heriky/ele.me)
-[![Build Status](https://img.shields.io/travis/USER/REPO/BRANCH.svg)](https://github.com/heriky/ele.me)
+[![Build Status](https://img.shields.io/travis//heriky/ele.me/master.svg)](https://github.com/heriky/ele.me)
 
 ### 快速开始
 > npm install 
